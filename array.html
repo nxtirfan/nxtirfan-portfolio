@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array — nxtirfan-portfolio</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/yuki.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="assets/js/tailwind.js"></script>
+  <link rel="stylesheet" href="assets/css/mujica.css">
+</head>
+<body>
+  <nav class="bg-transparent fixed top-0 w-full z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center hover-scale">
+        <img src="assets/img/avemujica.png" alt="logo" class="h-10"><span class="ml-2 font-bold text-xl">nxtirfan</span>
+      </a>
+      <a href="index.html" class="mujica-badge hover-scale">← Beranda</a>
+    </div>
+  </nav>
+  <section class="section-grid-fade" style="padding-top:6rem">
+    <div class="grid-overlay"></div>
+    <div class="container mx-auto px-4 py-12 section-content">
+      <h1 class="text-3xl font-bold text-center">Tabel Array 🗂️</h1>
+      <p class="text-center text-sm mt-2 mb-8 opacity-70">Render statis dari <code>array.php</code> — tabel di-hardcode agar jalan di hosting statis.</p>
+      <div class="flex flex-wrap justify-center" style="gap:1rem">
+        <div class="mujica-glass p-4">
+          <table class="mujica-table"><tr><th>No</th><th>Bulan</th></tr>
+          <tr><td>1</td><td>Januari</td></tr><tr><td>2</td><td>Februari</td></tr><tr><td>3</td><td>Maret</td></tr><tr><td>4</td><td>April</td></tr><tr><td>5</td><td>Mei</td></tr><tr><td>6</td><td>Juni</td></tr><tr><td>7</td><td>Juli</td></tr><tr><td>8</td><td>Agustus</td></tr><tr><td>9</td><td>September</td></tr><tr><td>10</td><td>Oktober</td></tr><tr><td>11</td><td>November</td></tr><tr><td>12</td><td>Desember</td></tr>
+          </table>
+        </div>
+        <div class="mujica-glass p-4">
+          <table class="mujica-table"><tr><th>No</th><th>Hari</th></tr>
+          <tr><td>1</td><td>Senin</td></tr><tr><td>2</td><td>Selasa</td></tr><tr><td>3</td><td>Rabu</td></tr><tr><td>4</td><td>Kamis</td></tr><tr><td>5</td><td>Jumat</td></tr><tr><td>6</td><td>Sabtu</td></tr><tr><td>7</td><td>Minggu</td></tr>
+          </table>
+        </div>
+        <div class="mujica-glass p-4">
+          <table class="mujica-table"><tr><th>Nama</th><th>Absen</th><th>Umur</th></tr>
+          <tr><td>Irfan</td><td>20</td><td>17</td></tr><tr><td>Nuel</td><td>10</td><td>18</td></tr><tr><td>Varrel</td><td>36</td><td>19</td></tr><tr><td>Jonathan</td><td>15</td><td>22</td></tr><tr><td>Hanif</td><td>22</td><td>69</td></tr>
+          </table>
+        </div>
+        <div class="mujica-glass p-4">
+          <table class="mujica-table"><tr><th>No</th><th>Nama</th><th>Hobi</th><th>Kendaraan</th></tr>
+          <tr><td>1</td><td>Irfan</td><td>Memancing</td><td>BRT</td></tr><tr><td>2</td><td>Nuel</td><td>Sepak Bola</td><td>Helikopter</td></tr><tr><td>3</td><td>Varrel</td><td>Main Game</td><td>Jet</td></tr><tr><td>4</td><td>Hanif</td><td>Volly</td><td>Kapal Pesiar</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="max-w-3xl mx-auto mujica-glass p-4 mt-8">
+        <h2 class="text-2xl font-bold text-center mb-4">Menu Makanan</h2>
+        <table class="mujica-table" style="width:100%"><tr><th>Nama</th><th>Harga</th><th>Deskripsi</th></tr>
+        <tr><td>Nasi Goreng</td><td>Rp 25.000</td><td>Nasi goreng sayuran + telur.</td></tr>
+        <tr><td>Ayam Bakar</td><td>Rp 35.000</td><td>Ayam bakar bumbu rempah.</td></tr>
+        <tr><td>Sop Buntut</td><td>Rp 40.000</td><td>Kuah kental, daging lembut.</td></tr>
+        <tr><td>Pisang Goreng</td><td>Rp 5.000</td><td>Garing di luar, lembut di dalam.</td></tr>
+        </table>
+      </div>
+      <h2 class="text-2xl font-bold text-center mt-10 mb-4">Menampilkan &amp; Mengedit Array</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <div class="mujica-glass p-4"><h3 class="font-bold mb-2">For</h3><p>Januari<br>Februari<br>Maret<br>April<br>Mei<br>Juni<br>Juli<br>Agustus<br>September<br>Oktober<br>November<br>Desember</p></div>
+        <div class="mujica-glass p-4"><h3 class="font-bold mb-2">Foreach</h3><p>Senin<br>Selasa<br>Rabu<br>Kamis<br>Jumat<br>Sabtu<br>Minggu</p></div>
+        <div class="mujica-glass p-4"><h3 class="font-bold mb-2">While</h3><p>Pagi<br>Siang<br>Sore<br>Malam</p></div>
+        <div class="mujica-glass p-4"><h3 class="font-bold mb-2">Menghapus</h3><p>Cerah, Terik, Berawan, <s>Mendung</s>, Badai</p><pre style="font-size:.75rem">Array ( [0]=Cerah [1]=Terik [2]=Berawan [4]=Badai )</pre></div>
+        <div class="mujica-glass p-4"><h3 class="font-bold mb-2">Menambah</h3><p>Ikan Teri, Ikan Lele, Ikan Tongkol, Ikan Tuna</p><pre style="font-size:.75rem">Array ( [0]=Teri [1]=Lele [2]=Tongkol [3]=Tuna )</pre></div>
+        <div class="mujica-glass p-4"><h3 class="font-bold mb-2">Menimpa</h3><p>muhammad, nxtirfan, alhakim</p><pre style="font-size:.75rem">Array ( [0]=muhammad [1]=nxtirfan [2]=alhakim )</pre></div>
+      </div>
+    </div>
+  </section>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

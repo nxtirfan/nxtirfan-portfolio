@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — nxtirfan-portfolio</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/yuki.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="assets/js/tailwind.js"></script>
+  <link rel="stylesheet" href="assets/css/mujica.css">
+</head>
+<body>
+  <section class="section-grid-fade" style="min-height:100vh;display:flex;align-items:center">
+    <div class="grid-overlay"></div>
+    <div class="container mx-auto px-4 section-content">
+      <div class="max-w-sm mx-auto mujica-glass p-6">
+        <p class="text-center"><a href="index.html" class="mujica-badge hover-scale">← Beranda</a></p>
+        <h1 class="text-2xl font-bold text-center mt-4">Login (Demo Statis)</h1>
+        <p class="text-center text-xs mt-2 opacity-70">Aslinya <code>login.php</code> pakai session — versi ini meniru dengan JS.<br>Demo: <b>irfan</b> / <b>irfan123</b></p>
+        <form id="form-login" class="mt-6" style="display:grid;gap:1rem">
+          <div><label for="username">Username</label><input id="username" class="mujica-input" type="text" required></div>
+          <div><label for="password">Password</label><input id="password" class="mujica-input" type="password" required></div>
+          <button class="mujica-btn" type="submit">Sign in</button>
+        </form>
+        <p id="msg" class="result-ok" style="display:none"></p>
+      </div>
+    </div>
+  </section>
+<script>
+document.getElementById('form-login').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var u = document.getElementById('username').value;
+  var p = document.getElementById('password').value;
+  var msg = document.getElementById('msg');
+  msg.style.display = 'block';
+  if (u === 'irfan' && p === 'irfan123') {
+    msg.textContent = 'Login berhasil! Mengalihkan ke beranda...';
+    setTimeout(function () { window.location.href = 'index.html'; }, 1000);
+  } else {
+    msg.textContent = 'Error: Authentication failed. Please try again.';
+    msg.className = 'result-err';
+  }
+});
+</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

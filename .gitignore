@@ -1,0 +1,5 @@
+# nxtirfan-portfolio — abaikan file lokal tugas
+.cloudflared/
+.wrangler/
+node_modules/
+dist/

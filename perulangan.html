@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perulangan — nxtirfan-portfolio</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/yuki.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="assets/js/tailwind.js"></script>
+  <link rel="stylesheet" href="assets/css/mujica.css">
+</head>
+<body>
+  <nav class="bg-transparent fixed top-0 w-full z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center hover-scale">
+        <img src="assets/img/avemujica.png" alt="logo" class="h-10"><span class="ml-2 font-bold text-xl">nxtirfan</span>
+      </a>
+      <a href="index.html" class="mujica-badge hover-scale">← Beranda</a>
+    </div>
+  </nav>
+  <section class="section-grid-fade" style="padding-top:6rem">
+    <div class="grid-overlay"></div>
+    <div class="container mx-auto px-4 py-12 section-content">
+      <div class="max-w-md mx-auto mujica-glass p-6">
+        <h1 class="text-3xl font-bold text-center">Perulangan 🔁</h1>
+        <p class="text-center text-sm mt-2 opacity-70">Versi statis (JavaScript). Konversi dari <code>perulangan.php</code>.</p>
+        <form id="form-ulang" class="mt-6" style="display:grid;gap:1rem">
+          <div><label for="kalimat">Kalimat</label><input id="kalimat" class="mujica-input" type="text" placeholder="cth. Semangat" required></div>
+          <div><label for="ulang">Jumlah (1–100)</label><input id="ulang" class="mujica-input" type="number" min="1" max="100" placeholder="cth. 5" required></div>
+          <button class="mujica-btn" type="submit">Submit</button>
+          <div id="hasil" style="display:grid;gap:0.6rem"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+<script>
+document.getElementById('form-ulang').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var kalimat = document.getElementById('kalimat').value;
+  var n = parseInt(document.getElementById('ulang').value, 10);
+  if (isNaN(n) || n < 1) n = 1; if (n > 100) n = 100;
+  var box = document.getElementById('hasil'); box.innerHTML = '';
+  for (var i = 1; i <= n; i++) {
+    var p = document.createElement('p');
+    p.className = 'result-ok'; p.style.marginTop = '0';
+    p.textContent = kalimat + ' ke-' + i;
+    box.appendChild(p);
+  }
+});
+</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
