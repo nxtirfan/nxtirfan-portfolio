@@ -1,64 +1,69 @@
-// nxtirfan-portfolio — interaksi ala mujica (drawer, navbar, trivia, smooth scroll)
+// Navigasi drawer, status navbar, smooth scroll (hormati reduced-motion).
 (function () {
-  var menuBtn = document.getElementById('mujica-menu-btn');
-  var closeBtn = document.getElementById('mujica-close-btn');
-  var mobileMenu = document.getElementById('mujica-mobile-menu');
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', function () {
-      mobileMenu.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  }
-  if (closeBtn && mobileMenu) {
-    closeBtn.addEventListener('click', function () {
-      mobileMenu.classList.remove('open');
-      document.body.style.overflow = 'auto';
-    });
-  }
-  if (mobileMenu) {
-    mobileMenu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow = 'auto';
-      });
-    });
+  var reduceMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var toggle = document.getElementById('navToggle');
+  var closeBtn = document.getElementById('navClose');
+  var drawer = document.getElementById('navDrawer');
+
+  function setDrawer(open) {
+    if (!drawer) return;
+    drawer.classList.toggle('open', open);
+    drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+    if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.style.overflow = open ? 'hidden' : 'auto';
   }
 
-  var jokes = [
-    'Kenapa programmer tidak suka alam terbuka? Karena ada banyak bug di sana!',
-    'Debugging: menghilangkan bug untuk membuat bug baru yang lebih kreatif.',
-    'Kenapa programmer selalu bawa payung? Karena takut runtime error.',
-    'Aku bukan malas, aku hanya dalam mode energy saving.',
-    "Komit pertama: 'Initial commit'. Komit kedua: 'Fix previous commit'.",
-    '99 little bugs in the code, take one down, patch it around, 127 little bugs.',
-    'MikroTik tidak salah, yang salah biasanya firewall-nya.',
-    'Jaringan bagus, hati tenang.'
-  ];
-  var jokeText = document.getElementById('mujica-joke-text');
-  var jokeBtn = document.getElementById('mujica-joke-btn');
-  if (jokeBtn && jokeText) {
-    jokeBtn.addEventListener('click', function () {
-      var cur = jokeText.textContent, next = cur, guard = 0;
-      while (next === cur && guard < 10) {
-        next = jokes[Math.floor(Math.random() * jokes.length)];
-        guard++;
-      }
-      jokeText.style.opacity = '0';
-      setTimeout(function () { jokeText.textContent = next; jokeText.style.opacity = '1'; }, 200);
+  if (toggle) toggle.addEventListener('click', function () { setDrawer(true); });
+  if (closeBtn) closeBtn.addEventListener('click', function () { setDrawer(false); });
+  if (drawer) {
+    drawer.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { setDrawer(false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setDrawer(false);
     });
   }
 
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       var target = document.querySelector(this.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
     });
   });
 
-  var navbar = document.querySelector('nav');
-  window.addEventListener('scroll', function () {
-    if (!navbar) return;
-    if (window.scrollY > 10) navbar.classList.add('scrolled');
-    else navbar.classList.remove('scrolled');
-  });
+  var header = document.querySelector('.site-header');
+  function onScroll() {
+    if (!header) return;
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Tandai link navigasi sesuai seksi yang terlihat (indikator aktif).
+  var spyLinks = document.querySelectorAll('.site-nav a[data-section], .nav-drawer a[data-section]');
+  var spyMap = {};
+  spyLinks.forEach(function (a) { spyMap[a.getAttribute('data-section')] = spyMap[a.getAttribute('data-section')] || []; spyMap[a.getAttribute('data-section')].push(a); });
+  if ('IntersectionObserver' in window && spyLinks.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var id = en.target.id;
+        spyLinks.forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('data-section') === id);
+        });
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    Object.keys(spyMap).forEach(function (id) {
+      var s = document.getElementById(id);
+      if (s) spy.observe(s);
+    });
+  }
+
+  var yr = document.getElementById('yr');
+  if (yr) yr.textContent = String(new Date().getFullYear());
 })();

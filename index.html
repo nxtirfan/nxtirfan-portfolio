@@ -3,233 +3,328 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>nxtirfan-portfolio — M. Irfan Al Hakim</title>
-  <meta name="description" content="Portofolio M. Irfan Al Hakim: Junior Tech Support & Web Developer, TJKT networking, CCNA.">
-  <link rel="icon" type="image/x-icon" href="assets/img/yuki.png">
+  <title>M. Irfan Al Hakim · Statistika &amp; Sains Data</title>
+  <meta name="description" content="Portofolio M. Irfan Al Hakim, mahasiswa Statistika dan Sains Data UNNES: riset kerentanan banjir Semarang-Demak (SMDS), aplikasi presensi GPS Laravel, machine learning, jaringan komputer.">
+  <meta name="theme-color" content="#0d0b14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="M. Irfan Al Hakim · Statistika & Sains Data">
+  <meta property="og:description" content="Portofolio M. Irfan Al Hakim: riset kerentanan banjir Semarang-Demak (SMDS), aplikasi presensi GPS Laravel, machine learning, jaringan komputer.">
+  <meta property="og:image" content="https://nxtirfan.github.io/nxtirfan-portfolio/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/img/niigo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="assets/js/tailwind.js"></script>
-  <link rel="stylesheet" href="assets/css/mujica.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <!-- Floating badges -->
-  <div class="mujica-floating-badge hidden md:block" style="top:5rem;left:2.5rem;animation-delay:0s">
-    <span class="mujica-badge hover-scale">Network Engineer 🌐</span>
-  </div>
-  <div class="mujica-floating-badge hidden md:block" style="top:33%;right:2.5rem;animation-delay:1s">
-    <span class="mujica-badge hover-scale">MikroTik ⚙️</span>
-  </div>
-  <div class="mujica-floating-badge hidden md:block" style="bottom:25%;left:25%;animation-delay:2s">
-    <span class="mujica-badge hover-scale">CCNA 📜</span>
-  </div>
-  <div class="mujica-floating-badge hidden md:block" style="bottom:5rem;right:5rem;animation-delay:3s">
-    <span class="mujica-badge hover-scale">Web Dev 💻</span>
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#atas" aria-label="Kembali ke atas, 25時、ナイトコードで。"><span class="brand-glyph" aria-hidden="true">❖</span><span aria-hidden="true"><span class="brand-num">2</span><span class="brand-num">5</span>時、ナイトコードで。</span></a>
+      <nav class="site-nav" aria-label="Navigasi utama">
+        <a href="#tentang" data-section="tentang">Tentang</a>
+        <a href="#riset" data-section="riset">Riset</a>
+        <a href="#proyek" data-section="proyek">Proyek</a>
+        <a href="#kemampuan" data-section="kemampuan">Kemampuan</a>
+        <a href="#pengalaman" data-section="pengalaman">Pengalaman</a>
+        <a href="#sertifikat" data-section="sertifikat">Sertifikat</a>
+        <a href="#kontak" data-section="kontak">Kontak</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navDrawer"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    </div>
+  </header>
+
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <div class="drawer-head">
+      <span class="brand" aria-hidden="true"><span class="brand-glyph">❖</span>25時、ナイトコードで。</span>
+      <button class="drawer-close" id="navClose" aria-label="Tutup menu">×</button>
+    </div>
+    <a class="drawer-link" href="#tentang" data-section="tentang">Tentang</a>
+    <a class="drawer-link" href="#riset" data-section="riset">Riset</a>
+    <a class="drawer-link" href="#proyek" data-section="proyek">Proyek</a>
+    <a class="drawer-link" href="#kemampuan" data-section="kemampuan">Kemampuan</a>
+    <a class="drawer-link" href="#pengalaman" data-section="pengalaman">Pengalaman</a>
+    <a class="drawer-link" href="#sertifikat" data-section="sertifikat">Sertifikat</a>
+    <a class="drawer-link" href="#kontak" data-section="kontak">Kontak</a>
   </div>
 
-  <!-- Nav -->
-  <nav class="bg-transparent fixed top-0 w-full border-b border-transparent transition-all duration-300 z-50">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <a href="#home" class="flex items-center hover-scale">
-        <img src="assets/img/avemujica.png" alt="nxtirfan logo" class="h-10">
-        <span class="ml-2 font-bold text-xl">nxtirfan</span>
-      </a>
-      <div class="hidden md:flex space-x-6">
-        <a href="#home" class="font-medium hover:text-am-pink transition-colors">Home</a>
-        <a href="#about" class="font-medium hover:text-am-pink transition-colors">About</a>
-        <a href="#skills" class="font-medium hover:text-am-pink transition-colors">Skills</a>
-        <a href="#gallery" class="font-medium hover:text-am-pink transition-colors">Gallery</a>
-        <a href="#program" class="font-medium hover:text-am-pink transition-colors">Program</a>
-        <a href="#sertifikat" class="font-medium hover:text-am-pink transition-colors">Sertifikat</a>
+  <main id="konten">
+    <!-- Hero -->
+    <section class="hero" id="atas" aria-label="Pembuka">
+      <div class="hero-figure" aria-hidden="true">
+        <img src="assets/img/ena-hero-contour.jpg" alt="" fetchpriority="high">
       </div>
-      <div class="md:hidden">
-        <button id="mujica-menu-btn" class="focus:outline-none hover-scale" aria-label="Buka menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
+      <div class="wrap hero-inner">
+        <p class="hero-kicker"><span class="n">·</span> Portofolio · Statistika &amp; Sains Data</p>
+        <h1>M. Irfan<br>Al Hakim</h1>
+        <p class="hero-role">Mahasiswa Statistika dan Sains Data, Universitas Negeri Semarang.</p>
+        <p class="hero-lede">Saya mempelajari statistika, machine learning, dan analisis data. Minat saya pada penginderaan jauh dan computer vision, dengan bekal pendidikan jaringan komputer.</p>
+        <ul class="hero-meta">
+          <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>Semarang, Indonesia</li>
+          <li><a href="mailto:mirfanhakim25@gmail.com"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg>mirfanhakim25@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/nxtirfan" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>LinkedIn ↗</a></li>
+        </ul>
+        <p class="hero-cta"><a class="link-arrow" href="#riset">Lihat riset unggulan ↓</a></p>
       </div>
-    </div>
-  </nav>
+      <p class="ghost" aria-hidden="true">25時、ナイトコードで。</p>
+      <a class="scroll-cue" href="#tentang" aria-label="Gulir ke bagian tentang">Gulir ↓</a>
+    </section>
 
-  <!-- Mobile drawer -->
-  <div id="mujica-mobile-menu" class="mujica-nav fixed top-0 right-0 h-full w-64 mujica-glass border-l border-am-border z-50 p-4 shadow-xl" style="transform:translateX(100%);background:rgba(26,12,46,0.95)">
-    <div class="flex justify-between items-center mb-6">
-      <div class="flex items-center">
-        <img src="assets/img/avemujica.png" alt="nxtirfan logo" class="h-8">
-        <span class="ml-2 font-bold">nxtirfan</span>
-      </div>
-      <button id="mujica-close-btn" class="focus:outline-none hover-scale" aria-label="Tutup menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <div class="flex flex-col space-y-4">
-      <a href="#home" class="font-medium hover:text-am-pink transition-colors py-2">Home</a>
-      <a href="#about" class="font-medium hover:text-am-pink transition-colors py-2">About</a>
-      <a href="#skills" class="font-medium hover:text-am-pink transition-colors py-2">Skills</a>
-      <a href="#gallery" class="font-medium hover:text-am-pink transition-colors py-2">Gallery</a>
-      <a href="#program" class="font-medium hover:text-am-pink transition-colors py-2">Program</a>
-      <a href="#sertifikat" class="font-medium hover:text-am-pink transition-colors py-2">Sertifikat</a>
-    </div>
-    <div class="absolute bottom-4 left-4 right-4 text-center text-sm opacity-50">© 2026 nxtirfan-portfolio</div>
-  </div>
-
-  <!-- Hero -->
-  <section id="home" class="section-grid-fade">
-    <div class="grid-overlay"></div>
-    <div class="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center section-content" style="padding-top:6rem">
-      <div class="md:w-1/2 mb-10 md:mb-0 relative z-10">
-        <span class="mujica-badge">Halo semua, nama saya</span>
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight hero-text" style="text-shadow:3px 3px 0px var(--am-magenta);margin-top:1rem">
-          M. Irfan Al Hakim<br><span class="text-am-pink">Junior Tech Support</span><br>&amp; Web Developer
-        </h1>
-        <p class="text-lg mb-8">Siswa TJKT yang mengelola jaringan komputer — plus membangun web statis yang bisa di-hosting di mana saja (GCS, Cloudflare Pages, GitHub Pages).</p>
-        <div class="flex flex-wrap gap-4">
-          <a class="mujica-btn hover-scale" href="https://wa.link/pcx8nl" target="_blank" rel="noopener">Hubungi saya →</a>
-          <a class="mujica-btn hover-scale" href="#program" style="background:transparent;border-color:var(--am-pink)">Lihat Program ↓</a>
+    <!-- 01 Tentang -->
+    <section class="section" id="tentang" aria-label="Tentang">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">01</span>
+          <h2 class="section-title">Tentang</h2>
         </div>
-      </div>
-      <div class="md:w-1/2 flex justify-center hover-scale relative z-10">
-        <div class="w-full max-w-md mujica-glass p-4 border-2 border-am-border rounded-lg relative">
-          <div class="absolute top-0 left-0 w-8 h-8 bg-am-magenta rounded-full flex items-center justify-center border-2 border-black" style="transform:translate(-50%,-50%);z-index:10"><span class="text-sm">🌐</span></div>
-          <div class="absolute bottom-0 right-0 w-8 h-8 bg-am-magenta rounded-full flex items-center justify-center border-2 border-black" style="transform:translate(50%,50%);z-index:10"><span class="text-sm">💻</span></div>
-          <img src="assets/img/irfanblob3.png" alt="M. Irfan Al Hakim" class="w-full rounded" width="400">
+        <div class="prose-narrow">
+          <p>Saya <strong class="owner">M. Irfan Al Hakim</strong>, mahasiswa S1 Statistika dan Sains Data, FMIPA, Universitas Negeri Semarang (semester lima). Ketertarikan saya mencakup statistika, machine learning, analisis data, penginderaan jauh, dan computer vision.</p>
+          <p>Sebelumnya saya menempuh pendidikan vokasi di bidang jaringan komputer dan telekomunikasi; bekal tersebut masih saya gunakan untuk urusan infrastruktur dan operasional.</p>
         </div>
+        <img class="stamp stamp-about" src="assets/stamps/ena-stamp-about.png" alt="" aria-hidden="true" loading="lazy">
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section id="about" class="section-grid-fade py-16">
-    <div class="grid-overlay"></div>
-    <div class="container mx-auto px-4 section-content">
-      <h2 class="text-3xl font-bold text-center mb-12">Tentang Saya ✨</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <div class="mujica-card mujica-glass p-6 hover-scale">
-          <div class="text-4xl mb-4">🌐</div>
-          <h3 class="text-xl font-bold mb-3">Kemahiran Jaringan</h3>
-          <p>Saya siswa SMK jurusan Teknik Jaringan Komputer dan Telekomunikasi (TJKT). Mampu mengelola jaringan komputer, termasuk pengaturan, keamanan, dan administrasinya.</p>
-          <div class="mt-4 flex flex-wrap">
-            <span class="mujica-language-badge hover-scale">MikroTik</span>
-            <span class="mujica-language-badge hover-scale">Cisco</span>
-            <span class="mujica-language-badge hover-scale">TCP/IP</span>
+    <div class="band" aria-hidden="true">
+      <img src="assets/img/ena-night-band.jpg" alt="">
+      <span class="band-mark tech">25:00</span>
+    </div>
+
+    <!-- 02 Riset Unggulan -->
+    <section class="section" id="riset" aria-label="Riset unggulan">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">02</span>
+          <h2 class="section-title">Riset Unggulan</h2>
+        </div>
+        <article class="feature">
+          <img class="stamp stamp-research" src="assets/stamps/ena-stamp-research.png" alt="" aria-hidden="true" loading="lazy">
+          <div class="feature-main">
+            <p class="strip" aria-label="Status publikasi"><span><span class="sq" aria-hidden="true"></span>ARTICLE / JOURNAL</span><span>SMDS / VOL. 01</span><span>STATUS / PUBLISHED</span></p>
+            <h3 class="feature-title">Comparative explainable ensemble learning for flood susceptibility mapping using Sentinel-1-derived flood inventory and multi-source geospatial data: A case study of the Semarang-Demak coastal area</h3>
+            <div class="meta-grid">
+          <div>
+            <h3>Penulis</h3>
+            <p><strong class="owner">M Irfan Al Hakim</strong>, Tsalis Ainur Rofi, Taufik Dwi Ferdiansyah, Riski Cahya Alfiansyah, Abdullah Azzam Al Muhtasib, Nur Achmey Selgi Harwanti</p>
+          </div>
+          <div>
+            <h3>Terbit</h3>
+            <p>SMDS · Vol. 1 No. 1 · hlm. 22-47 · ID artikel 62500 · DOI 10.15294/smds.v1i1.62500</p>
+          </div>
+          <div>
+            <h3>Akses</h3>
+            <p class="link-row">
+              <a class="link-arrow" href="https://journal.unnes.ac.id/journals/smds/article/view/62500" target="_blank" rel="noopener">Halaman artikel ↗</a>
+            </p>
           </div>
         </div>
-        <div class="mujica-card mujica-glass p-6 hover-scale">
-          <div class="text-4xl mb-4">🤝</div>
-          <h3 class="text-xl font-bold mb-3">Mari berteman</h3>
-          <p>Saya aktif di media sosial dan kadang membagikan karya serta project yang sedang dikerjakan.</p>
-          <div class="mt-4 flex flex-wrap gap-3">
-            <a class="mujica-badge hover-scale" href="https://www.youtube.com/@Arishvel" target="_blank" rel="noopener">YouTube</a>
-            <a class="mujica-badge hover-scale" href="https://www.instagram.com/nxtirfan" target="_blank" rel="noopener">Instagram</a>
-            <a class="mujica-badge hover-scale" href="https://www.facebook.com/arishuvel" target="_blank" rel="noopener">Facebook</a>
-            <a class="mujica-badge hover-scale" href="https://www.linkedin.com/in/m-irfan-al-hakim-375ab029a/" target="_blank" rel="noopener">LinkedIn</a>
+        <p class="scope-note">Studi kasus kawasan pesisir Semarang-Demak: membandingkan pendekatan ensemble learning yang dapat dijelaskan untuk pemetaan kerentanan banjir, dengan inventaris banjir turunan Sentinel-1 sebagai target dan multi-sumber data geospasial.</p>
+          </div>
+          <figure class="feature-visual" aria-hidden="true">
+            <img class="visual" src="assets/img/ena-still.jpg" alt="" loading="lazy">
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <!-- 03 Proyek -->
+    <section class="section" id="proyek" aria-label="Proyek">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">03</span>
+          <h2 class="section-title">Proyek</h2>
+        </div>
+        <article class="feature">
+          <div class="feature-main">
+            <p class="strip" aria-label="Konteks project"><span><span class="sq" aria-hidden="true"></span>PROJECT / WEB APP</span><span>LARAVEL 10 / MYSQL</span><span>TUGAS KELOMPOK / 2025</span></p>
+            <h3 class="feature-title">PresensiGPS: Aplikasi Presensi Online Berbasis GPS dan Foto Selfie</h3>
+            <div class="meta-grid">
+          <div>
+            <h3>Peran</h3>
+            <p>Full-stack: backend Laravel, skema database, dan antarmuka Blade. Tugas Kelompok 9, Mata Kuliah Basis Data.</p>
+          </div>
+          <div>
+            <h3>Teknologi</h3>
+            <p>Laravel 10 · MySQL · Blade · Tabler · Leaflet/OpenStreetMap</p>
+          </div>
+          <div>
+            <h3>Akses</h3>
+            <p class="link-row">
+              <a class="link-arrow" href="https://github.com/nxtirfan/presensi-gps-selfie" target="_blank" rel="noopener">Repositori GitHub ↗</a>
+            </p>
+          </div>
+        </div>
+        <p class="scope-note">Presensi masuk dan pulang dengan validasi radius GPS 20 meter (Haversine, dihitung server-side) dan foto selfie. Tiga peran (Siswa, Guru, Admin) dengan monitoring peta, rekap, dan cetak laporan kehadiran.</p>
+          </div>
+          <figure class="feature-visual">
+            <img class="visual visual--shot" src="assets/img/proyek-presensi.png" alt="Tangkapan layar halaman Data Siswa aplikasi PresensiGPS" loading="lazy">
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <!-- 04 Kemampuan -->
+    <section class="section" id="kemampuan" aria-label="Kemampuan">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">04</span>
+          <h2 class="section-title">Kemampuan</h2>
+        </div>
+        <div class="cap-groups">
+          <div>
+            <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16" /><path d="M18 17V9" /><path d="M13 17V5" /><path d="M8 17v-3" /></svg>Data, statistika &amp; machine learning</h3>
+            <ul class="rows">
+              <li>
+                <span class="row-key">Python</span>
+                <div><h3>Pemrograman Python</h3><p>Tersertifikasi Dicoding untuk pengolahan data dan prototyping.</p></div>
+              </li>
+              <li>
+                <span class="row-key">ML</span>
+                <div><h3>Machine learning fundamentals</h3><p>Tersertifikasi Dicoding, konsep dasar untuk pemula.</p></div>
+              </li>
+              <li>
+                <span class="row-key">Statistika</span>
+                <div><h3>Pemodelan statistika &amp; analisis data</h3><p>Konteks studi S1 Statistika dan Sains Data.</p></div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1" /><rect x="2" y="16" width="6" height="6" rx="1" /><rect x="9" y="2" width="6" height="6" rx="1" /><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" /><path d="M12 12V8" /></svg>Rekayasa &amp; infrastruktur</h3>
+            <ul class="rows">
+              <li>
+                <span class="row-key">AI Eng</span>
+                <div><h3>Backend AI engineering</h3><p>Praktik magang: rekayasa backend untuk sistem AI dan spec-driven development.</p></div>
+              </li>
+              <li>
+                <span class="row-key">Jaringan</span>
+                <div><h3>Jaringan komputer · MikroTik, MTCNA</h3><p>Konfigurasi perangkat, TCP/IP, infrastruktur dan instalasi.</p></div>
+              </li>
+              <li>
+                <span class="row-key">Operasional</span>
+                <div><h3>Inventaris &amp; dukungan teknis</h3><p>Stock opname gudang; perawatan sistem CCTV.</p></div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section-grid-fade py-16" style="background:rgba(0,0,0,0.2)">
-    <div class="grid-overlay"></div>
-    <div class="container mx-auto px-4 section-content">
-      <h2 class="text-3xl font-bold text-center mb-8">Kemampuan Saya 💪</h2>
-      <p class="text-center mb-12 max-w-2xl mx-auto">Hal terkait dunia jaringan komputer yang saya kuasai selama ini.</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="mujica-card mujica-glass p-6 hover-scale">
-          <div class="text-4xl mb-4">⚙️</div>
-          <h3 class="text-xl font-bold mb-3">MikroTik Fundamentals</h3>
-          <p>Berpengalaman mengelola dan mengonfigurasi perangkat MikroTik (router, switch, access point) untuk mengoptimalkan kinerja jaringan.</p>
-          <p class="mt-4"><span class="mujica-badge">Networking</span></p>
+    <!-- 05 Pengalaman -->
+    <section class="section" id="pengalaman" aria-label="Pengalaman">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">05</span>
+          <h2 class="section-title">Pengalaman</h2>
         </div>
-        <div class="mujica-card mujica-glass p-6 hover-scale">
-          <div class="text-4xl mb-4">🔌</div>
-          <h3 class="text-xl font-bold mb-3">CCNA Fundamentals</h3>
-          <p>Keahlian membangun topologi jaringan dengan perangkat Cisco serta konfigurasi yang tepat dan sesuai.</p>
-          <p class="mt-4"><span class="mujica-badge">Cisco</span></p>
+        <ul class="rows">
+          <li>
+            <span class="row-key"><span class="when">Jul 2026 - sekarang</span></span>
+            <div>
+              <h3>Backend AI Engineer Intern · FlyRank AI, Jawa Tengah</h3>
+              <p>Magang dengan fokus rekayasa backend untuk sistem AI.</p>
+            </div>
+          </li>
+          <li>
+            <span class="row-key"><span class="when">Jul 2023 - Des 2023</span></span>
+            <div>
+              <h3>Teknisi Stock Opname &amp; CCTV · GSI CCTV, Semarang</h3>
+              <p>Perawatan sistem CCTV dan inventarisasi gudang.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 06 Pendidikan -->
+    <section class="section" id="pendidikan" aria-label="Pendidikan">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">06</span>
+          <h2 class="section-title">Pendidikan</h2>
         </div>
-        <div class="mujica-card mujica-glass p-6 hover-scale">
-          <div class="text-4xl mb-4">🖧</div>
-          <h3 class="text-xl font-bold mb-3">Network Infrastructure</h3>
-          <p>Mampu merancang topologi, mengatur pengalamatan IP, menentukan spesifikasi perangkat, serta memasang kabel jaringan.</p>
-          <p class="mt-4"><span class="mujica-badge">Infra</span></p>
+        <ul class="rows">
+          <li>
+            <span class="row-key"><span class="when">2024 - sekarang</span></span>
+            <div>
+              <h3>S1 Statistika dan Sains Data · Universitas Negeri Semarang</h3>
+              <p>Fakultas Matematika dan Ilmu Pengetahuan Alam.</p>
+            </div>
+          </li>
+          <li>
+            <span class="row-key"><span class="when">2021 - 2024</span></span>
+            <div>
+              <h3>Teknik Jaringan Komputer dan Telekomunikasi · SMK Negeri 8 Semarang</h3>
+              <p>Pendidikan vokasi jaringan komputer.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 07 Sertifikasi -->
+    <section class="section" id="sertifikat" aria-label="Sertifikasi">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">07</span>
+          <h2 class="section-title">Sertifikasi</h2>
+        </div>
+        <ul class="rows">
+          <li>
+            <span class="row-key">Dicoding</span>
+            <div>
+              <h3>Memulai Pemrograman dengan Python</h3>
+              <p><a href="https://www.dicoding.com/certificates/NVP7W8EERZR0" target="_blank" rel="noopener">Verifikasi ↗</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="row-key">Dicoding</span>
+            <div>
+              <h3>Belajar Machine Learning untuk Pemula</h3>
+              <p><a href="https://www.dicoding.com/certificates/QLZ9NRE0DZ5D" target="_blank" rel="noopener">Verifikasi ↗</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="row-key">Dicoding</span>
+            <div>
+              <h3>Spec-Driven Development dengan Kiro</h3>
+              <p><a href="https://www.dicoding.com/certificates/KEXLM980RZG2" target="_blank" rel="noopener">Verifikasi ↗</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="row-key">MikroTik</span>
+            <div>
+              <h3>MikroTik Certified Network Associate (MTCNA)</h3>
+              <p><a href="https://mikrotik.com/training/certificates/c306103cb580a06c104a" target="_blank" rel="noopener">Verifikasi ↗</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section class="section contact" id="kontak" aria-label="Kontak">
+      <img class="contact-motif" src="assets/img/ena-line-inv.jpg" alt="" aria-hidden="true" loading="lazy">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-index">08</span>
+          <h2 class="section-title">Kontak</h2>
+        </div>
+        <p><a class="contact-mail" href="mailto:mirfanhakim25@gmail.com">mirfanhakim25@gmail.com</a></p>
+        <ul class="contact-list">
+          <li><a href="https://www.linkedin.com/in/nxtirfan" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>LinkedIn ↗</a></li>
+          <li><a href="https://github.com/nxtirfan" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg>GitHub ↗</a></li>
+        </ul>
+        <img class="stamp stamp-contact" src="assets/stamps/ena-stamp-contact.png" alt="" aria-hidden="true" loading="lazy">
+        <p class="foot-mark tech"><span aria-hidden="true">❖</span> 25:00 · ARSIP DIGITAL</p>
+        <div class="colophon">
+          <span>© <span id="yr">2026</span> M. Irfan Al Hakim · Semarang, Indonesia</span>
+          <span>HTML statis · Space Grotesk · Motif olahan monokrom dari card art Project Sekai (© SEGA / COLORFUL PALETTE / Crypton Future Media)</span>
         </div>
       </div>
-      <div class="mujica-joke-box max-w-2xl mx-auto mt-12 hover-scale">
-        <p class="font-bold mb-2">Trivia jaringan:</p>
-        <p id="mujica-joke-text">MikroTik tidak salah, yang salah biasanya firewall-nya.</p>
-        <p class="mt-3"><button id="mujica-joke-btn" class="mujica-btn text-sm hover-scale" type="button">Acak trivia</button></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section id="gallery" class="section-grid-fade py-16">
-    <div class="grid-overlay"></div>
-    <div class="container mx-auto px-4 section-content">
-      <h2 class="text-3xl font-bold text-center mb-8">Karya Saya 🎨</h2>
-      <p class="text-center mb-12 max-w-2xl mx-auto">Karya yang dibuat dengan Cinema 4D dan Adobe Photoshop.</p>
-      <div class="max-w-2xl mx-auto mujica-glass p-4">
-        <img class="w-full rounded-lg mb-4" src="assets/img/velyuuart1.jpg" alt="Karya 1">
-        <div class="grid grid-cols-3 gap-4">
-          <img class="w-full rounded-lg" src="assets/img/velyuuart2.png" alt="Karya 2">
-          <img class="w-full rounded-lg" src="assets/img/velyuuart3.png" alt="Karya 3">
-          <img class="w-full rounded-lg" src="assets/img/velyuuart4.png" alt="Karya 4">
-        </div>
-      </div>
-      <p class="text-center mt-6"><a class="mujica-badge hover-scale" href="https://www.instagram.com/nxtirfan" target="_blank" rel="noopener">Selengkapnya di Instagram →</a></p>
-    </div>
-  </section>
-
-  <!-- Program -->
-  <section id="program" class="section-grid-fade py-16" style="background:rgba(0,0,0,0.2)">
-    <div class="grid-overlay"></div>
-    <div class="container mx-auto px-4 section-content">
-      <h2 class="text-3xl font-bold text-center mb-8">Project Terbaru 🚀</h2>
-      <p class="text-center mb-12 max-w-2xl mx-auto">Program demo yang dikonversi dari PHP ke JavaScript murni agar bisa jalan di hosting statis (GCS / Cloudflare Pages).</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <a href="kalkulator.html" class="mujica-card mujica-glass p-6 mujica-shop-item hover-scale block">
-          <div class="text-5xl mb-4">🧮</div>
-          <h3 class="text-xl font-bold mb-2">Kalkulator</h3>
-          <p class="mb-4">Operasi matematika sederhana (+ − × /) dengan validasi bagi-nol.</p>
-          <span class="mujica-badge">Buka →</span>
-        </a>
-        <a href="umur-tinggi.html" class="mujica-card mujica-glass p-6 mujica-shop-item hover-scale block">
-          <div class="text-5xl mb-4">📏</div>
-          <h3 class="text-xl font-bold mb-2">Umur &amp; Tinggi</h3>
-          <p class="mb-4">Tebakan berbasis umur dan tinggi badan.</p>
-          <span class="mujica-badge">Buka →</span>
-        </a>
-        <a href="perulangan.html" class="mujica-card mujica-glass p-6 mujica-shop-item hover-scale block">
-          <div class="text-5xl mb-4">🔁</div>
-          <h3 class="text-xl font-bold mb-2">Perulangan</h3>
-          <p class="mb-4">Mengulang kalimat dengan jumlah yang diinginkan (1–100).</p>
-          <span class="mujica-badge">Buka →</span>
-        </a>
-        <a href="array.html" class="mujica-card mujica-glass p-6 mujica-shop-item hover-scale block">
-          <div class="text-5xl mb-4">🗂️</div>
-          <h3 class="text-xl font-bold mb-2">Array</h3>
-          <p class="mb-4">Tabel bulan, hari, anggota, murid, dan menu makanan.</p>
-          <span class="mujica-badge">Buka →</span>
-        </a>
-      </div>
-      <p class="text-center mt-8 text-sm opacity-70">Demo login statis juga tersedia: <a href="login.html" class="underline">login.html</a> (kredensial demo <b>irfan</b> / <b>irfan123</b>).</p>
-    </div>
-  </section>
-
-  <!-- Sertifikat -->
-  <section id="sertifikat" class="section-grid-fade py-16">
-    <div class="grid-overlay"></div>
-    <div class="container mx-auto px-4 section-content text-center">
-      <h2 class="text-3xl font-bold mb-8">Sertifikat 🏆</h2>
-      <p class="mb-8 max-w-2xl mx-auto">Sertifikat pelatihan CCNA Fundamentals dari IDN Boarding School.</p>
-      <div class="inline-block mujica-glass p-4 hover-scale">
-        <img class="rounded-lg" src="assets/img/CCNA.png" alt="Sertifikat CCNA Fundamentals" width="600">
-      </div>
-    </div>
-  </section>
-
-  <footer class="py-8 text-center text-sm opacity-70">
-    <p>© 2026 nxtirfan-portfolio — M. Irfan Al Hakim. Dibangun statis ala Mujica, siap hosting di mana saja.</p>
-  </footer>
+    </section>
+  </main>
 
   <script src="assets/js/main.js"></script>
 </body>
